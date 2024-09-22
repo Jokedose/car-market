@@ -1,0 +1,22 @@
+env: ${ENV}
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: car-market
+  sleuth:
+    sampler:
+      probability: 1.0
+  liquibase:
+    change-log: classpath:/liquibase/master.xml
+    enabled: ${LIQUIBASE_ENABLE}
+    databaseChangeLogTable: databasechangelog
+    databaseChangeLogLockTable: databasechangeloglock
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name : org.postgresql.Driver
