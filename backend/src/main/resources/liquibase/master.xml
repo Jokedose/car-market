@@ -6,4 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <include file="liquibase/changelog/health_check.xml" relativeToChangelogFile="false"/>
+    <include file="liquibase/changelog/20240922_create_user_account.xml" relativeToChangelogFile="false" />
+    <include file="liquibase/changelog/20240922_create_account.xml" relativeToChangelogFile="false" />
+    <include file="liquibase/changelog/20240922_create_auth_token.xml" relativeToChangelogFile="false" />
 </databaseChangeLog>

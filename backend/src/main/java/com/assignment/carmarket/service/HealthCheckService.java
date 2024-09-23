@@ -16,7 +16,6 @@ public class HealthCheckService {
     }
 
     public HealthCheckEntity getHealthCheck() throws NotFoundHandler {
-        log.info("get health check.");
         return this.healthCheckRepository.findById(1L).orElseThrow(() -> new NotFoundHandler("Health check not found."));
     }
 }

@@ -11,7 +11,7 @@ spring:
       probability: 1.0
   liquibase:
     change-log: classpath:/liquibase/master.xml
-    enabled: ${LIQUIBASE_ENABLE}
+    enabled: ${LBENABLE}
     databaseChangeLogTable: databasechangelog
     databaseChangeLogLockTable: databasechangeloglock
 

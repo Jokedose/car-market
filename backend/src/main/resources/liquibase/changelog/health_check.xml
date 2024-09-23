@@ -8,7 +8,7 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <!-- Changeset for table 'account' -->
-    <changeSet id="health_check" author="yourname">
+    <changeSet id="health_check" author="trirong.bam">
         <createTable tableName="health_check">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
