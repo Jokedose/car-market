@@ -1,6 +1,5 @@
 package com.assignment.carmarket.entity;
 
-import com.assignment.carmarket.repository.BaseColumn;
 import jakarta.persistence.*;
 import lombok.Data;
 

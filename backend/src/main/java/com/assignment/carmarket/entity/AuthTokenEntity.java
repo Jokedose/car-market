@@ -1,6 +1,5 @@
 package com.assignment.carmarket.entity;
 
-import com.assignment.carmarket.repository.BaseColumn;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Changeset for table 'user' -->
+    <changeSet id="20240923-create-car-profile" author="trirong.bam" dbms="postgresql">
+        <createTable tableName="car_profile">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="car_branch" type="varchar(255)"/>
+            <column name="car_model" type="varchar(255)"/>
+            <column name="car_sub_model" type="varchar(255)"/>
+            <column name="car_type" type="varchar(255)"/>
+            <column name="car_year" type="varchar(255)"/>
+            <column name="car_gear" type="varchar(255)"/>
+            <column name="mileage" type="double"/>
+            <column name="car_score" type="double"/>
+            <column name="car_price" type="double"/>
+            <column name="user_account_id" type="int"/>
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp"/>
+            <column name="updated_by" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

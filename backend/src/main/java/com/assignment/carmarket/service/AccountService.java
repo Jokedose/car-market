@@ -31,14 +31,14 @@ public class AccountService {
         return account;
     }
 
-    private AccountEntity validateUserName(SignUpAccountDTO dto, String encyptPassword, String salt, UserAccountEntity user, String fullName) throws BadRequestHandler {
+    private AccountEntity validateUserName(SignUpAccountDTO dto, String encryptPassword, String salt, UserAccountEntity user, String fullName) throws BadRequestHandler {
         AccountEntity account = this.accountRepository.findByUserName(dto.getUsername()).orElse(null);
         if (account != null) {
             throw new BadRequestHandler("Username นี้ ไม่สามารถใช้งานได้");
         } else {
             account = new AccountEntity();
             account.setUserName(dto.getUsername().toLowerCase());
-            account.setPassword(encyptPassword);
+            account.setPassword(encryptPassword);
             account.setSalt(salt);
             account.setIsEnabled(true);
             account.setUserAccount(user);
