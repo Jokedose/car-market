@@ -1,6 +1,9 @@
 package com.assignment.carmarket.utils;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -10,11 +13,16 @@ import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+@Component
 public class EncryptionUtils {
     private static final String AES_ALGORITHM = "AES";
     private static final String AES_TRANSFORMATION = "AES/ECB/PKCS5Padding";
-    @Value("${AES_KEY}")
     private static String aesKey;
+
+    @Autowired
+    public EncryptionUtils(Environment env) {
+        aesKey = env.getProperty("AES_KEY");
+    }
 
     public static byte[] encrypt(byte[] file) throws Exception {
         byte[] secretKeyBytes = Base64.getDecoder().decode(aesKey);
