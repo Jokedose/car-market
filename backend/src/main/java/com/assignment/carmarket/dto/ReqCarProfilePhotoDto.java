@@ -7,6 +7,7 @@ import lombok.Data;
 public class ReqCarProfilePhotoDto {
     private Long id;
     private Long carProfileId;
+    private String image;
     private String createdBy;
     private String updatedBy;
 }

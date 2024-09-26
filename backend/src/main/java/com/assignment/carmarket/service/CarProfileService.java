@@ -85,6 +85,7 @@ public class CarProfileService {
 
     public CarProfileEntity createCarProfile(ReqCreateCarProfileDTO dto) {
         CarProfileEntity carProfile = new CarProfileEntity();
+        carProfile.setStatus("WAITING_FOR_SALE");
         BeanUtils.copyProperties(dto, carProfile);
         this.carProfileRepository.save(carProfile);
         return carProfile;
@@ -101,8 +102,8 @@ public class CarProfileService {
     }
 
     private void checkFieldUpdate(ReqCreateCarProfileDTO dto, CarProfileEntity carProfile) {
-        if (StringUtils.isNotEmpty(dto.getCarBranch()))
-            carProfile.setCarBranch(dto.getCarBranch());
+        if (StringUtils.isNotEmpty(dto.getCarBrand()))
+            carProfile.setCarBrand(dto.getCarBrand());
         if (StringUtils.isNotEmpty(dto.getCarModel()))
             carProfile.setCarModel(dto.getCarModel());
         if (StringUtils.isNotEmpty(dto.getCarSubModel()))

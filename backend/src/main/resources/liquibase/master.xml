@@ -11,4 +11,5 @@
     <include file="liquibase/changelog/20240922_create_auth_token.xml" relativeToChangelogFile="false" />
     <include file="liquibase/changelog/20240923_create_car_profile.xml" relativeToChangelogFile="false" />
     <include file="liquibase/changelog/20240923_create_car_profile_photo.xml" relativeToChangelogFile="false" />
+    <include file="liquibase/changelog/20240923_create_bluebook_car_profile.xml" relativeToChangelogFile="false" />
 </databaseChangeLog>

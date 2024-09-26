@@ -14,8 +14,8 @@ public class CarProfileEntity extends BaseColumn {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "car_branch")
-    private String carBranch;
+    @Column(name = "car_brand")
+    private String carBrand;
 
     @Column(name = "car_model")
     private String carModel;
@@ -32,6 +32,15 @@ public class CarProfileEntity extends BaseColumn {
     @Column(name = "car_gear")
     private String carGear;
 
+    @Column(name = "car_color")
+    private String carColor;
+
+    @Column(name = "license_plate_number")
+    private String licensePlateNumber;
+
+    @Column(name = "license_plate_province")
+    private String licensePlateProvince;
+
     @Column(name = "mileage")
     private Double mileage;
 
@@ -43,6 +52,9 @@ public class CarProfileEntity extends BaseColumn {
 
     @Column(name = "user_account_id")
     private Integer userAccountId;
+
+    @Column(name = "status")
+    private String status;
 
     @OneToMany(mappedBy = "carProfile", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CarProfilePhotoEntity> carProfilePhotos;

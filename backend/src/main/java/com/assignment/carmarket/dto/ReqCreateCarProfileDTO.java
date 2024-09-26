@@ -4,12 +4,15 @@ import lombok.Data;
 
 @Data
 public class ReqCreateCarProfileDTO {
-    private String carBranch;
+    private String carBrand;
     private String carModel;
     private String carSubModel;
     private String carType;
     private String carYear;
     private String carGear;
+    private String carColor;
+    private String licensePlateNumber;
+    private String licensePlateProvince;
     private Double mileage;
     private Double carScore;
     private Double carPrice;

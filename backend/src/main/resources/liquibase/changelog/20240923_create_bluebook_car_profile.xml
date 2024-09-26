@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="20240923-create-bluebook-car-profile" author="trirong.bam" dbms="postgresql">
+        <createTable tableName="bluebook_car_profile">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="car_brand" type="varchar(255)"/>
+            <column name="car_model" type="varchar(255)"/>
+            <column name="car_sub_model" type="varchar(255)"/>
+            <column name="car_year" type="varchar(255)"/>
+            <column name="car_gear" type="varchar(255)"/>
+            <column name="car_type" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20240923-insert-bluebook-car-profile" author="trirong.bam" dbms="postgresql">
+        <sql dbms="postgresql">
+            INSERT INTO bluebook_car_profile (car_brand, car_model, car_sub_model, car_year, car_gear, car_type)
+            VALUES ('Ford', 'Mustang', 'Mustang 2.3 EcoBoost (CBU) (MY18)', '2023', 'Auto', 'Sedan');
+            INSERT INTO bluebook_car_profile (car_brand, car_model, car_sub_model, car_year, car_gear, car_type)
+            VALUES ('Ford', 'Mustang', 'Mustang 5.0 V8 GT (CBU) (MY18)', '2023', 'Auto', 'Sedan');
+            INSERT INTO bluebook_car_profile (car_brand, car_model, car_sub_model, car_year, car_gear, car_type)
+            VALUES ('Ford', 'Mustang', 'Mustang Mach-E RWD EV', '2023', 'Auto', 'Sedan');
+
+            INSERT INTO bluebook_car_profile (car_brand, car_model, car_sub_model, car_year, car_gear, car_type)
+            VALUES ('BMW', 'i8', 'i8 1.5', '2020', 'Auto', 'Sedan');
+            INSERT INTO bluebook_car_profile (car_brand, car_model, car_sub_model, car_year, car_gear, car_type)
+            VALUES ('BMW', 'i8', 'i8 1.5 Roadster (CBU)', '2020', 'Auto', 'Sedan');
+
+            INSERT INTO bluebook_car_profile (car_brand, car_model, car_sub_model, car_year, car_gear, car_type)
+            VALUES ('Nissan', '370Z', '370Z 3.7', '2017', 'Manual', 'Sedan');
+
+
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
